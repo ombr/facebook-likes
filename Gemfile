@@ -38,3 +38,7 @@ gem 'cloudfoundry-jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug'
+
+# Authentification to facebook
+gem 'omniauth-facebook'
+gem 'httparty'

@@ -1,0 +1,11 @@
+<h1>Facebook#likes</h1>
+<% for o in @result %>
+    <a href="https://facebook.com/<%= o[1][:like]["object_id"] %>">
+    <%= o[1][:like]["object_type"] %>
+    <% for u in o[1][:users] %>
+        <img src="https://graph.facebook.com/<%= u["uid"]-%>/picture?type=large">
+        <%= u["name"]  %>
+    <% end %>
+</a>
+    <br/>
+<% end %>
