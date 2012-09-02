@@ -24,3 +24,6 @@ export FACEBOOK_SECRET="ece81a3ae8712ede42bedc9f9a3dbe5d"
 `
 
 Thank's !
+
+
+Version beta
