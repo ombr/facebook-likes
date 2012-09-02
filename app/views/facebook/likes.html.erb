@@ -1,11 +1,31 @@
-<h1>Facebook#likes</h1>
+<div class="row">
 <% for o in @result %>
-    <a href="https://facebook.com/<%= o[1][:like]["object_id"] %>">
-    <%= o[1][:like]["object_type"] %>
-    <% for u in o[1][:users] %>
-        <img src="https://graph.facebook.com/<%= u["uid"]-%>/picture?type=large">
-        <%= u["name"]  %>
-    <% end %>
-</a>
-    <br/>
+    <div class="span9 well">
+        <div class="row" >
+            <div class="thumbnail span2">
+                <img src="https://graph.facebook.com/me/picture?access_token=<%=@token%>">
+                <div class="caption">
+                    <center>You</center>
+                </div>
+            </div>
+            <% for u in o[1][:users] %>
+                <div class="span" style="height:100px"> &amp; </div>
+                <div class="thumbnail span2">
+                    <img src="https://graph.facebook.com/<%= u["uid"]-%>/picture">
+                    <div class="caption">
+                        <center><%= u["name"]  %></center>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <div class="row" >
+            <div class="span4">
+                <a href="https://facebook.com/<%= o[1][:like]["object_id"] %>">
+                like the same 
+                <%= o[1][:like]["object_type"] %>
+                </a>
+            </div>
+        </div>
+    </div>
 <% end %>
+</div>

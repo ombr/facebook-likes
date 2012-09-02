@@ -42,3 +42,4 @@ gem 'cloudfoundry-jquery-rails'
 # Authentification to facebook
 gem 'omniauth-facebook'
 gem 'httparty'
+gem 'twitter-bootstrap-rails'
